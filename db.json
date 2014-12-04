@@ -1,0 +1,15 @@
+{
+  "posts": {
+    "post_id_1": {
+      "comments": {
+        "comment_id_1": true
+      }
+    }
+  },
+  "comments": {
+    "comment_id_1": {
+      "body": "This is a comment",
+      "post": "post_id_1"
+    }
+  }
+}
