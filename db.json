@@ -11,5 +11,11 @@
       "body": "This is a comment",
       "post": "post_id_1"
     }
-  }
+  },
+  "lists": [
+    {"item": 1},
+    {"item": 2},
+    {"name": "milk"},
+    {"name": "meat"}
+  ]
 }
