@@ -3,9 +3,9 @@
 
 This is currently a wee prototype Ember version of [SHarissis Angular Shopping List App](https://github.com/sharissis/Shopping-List).
 Uses:
-- * [ember.js](http://emberjs.com/) via [ember-cli](http://www.ember-cli.com/)
-- Ember-Data
-- Firebase for both the database and hosting
+- [ember.js](http://emberjs.com/) via [ember-cli](http://www.ember-cli.com/)
+- [Ember-Data](http://emberjs.com/api/data/)
+- [Firebase](http://www.firebase.com) for both the database and hosting
 
 To run this app, follow instructions below.
 
@@ -26,7 +26,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Open your browser at [http://localhost:4200](http://localhost:4200).
 
 ### Running Tests
 #### Note: currently broken because of [Content Security Policy](https://github.com/rwjblue/ember-cli-content-security-policy) issues
