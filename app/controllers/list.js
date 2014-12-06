@@ -9,7 +9,7 @@ export default Ember.ArrayController.extend({
 
     addItem: function() {
       var newItem = this.store.createRecord('list', {
-        name: this.get('listItem'),
+        name: this.get('listItem').capitalize(),
         timestamp: new Date()
       });
       this.set('listItem', '');
