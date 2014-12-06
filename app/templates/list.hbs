@@ -22,6 +22,6 @@
 
 <ul>
 {{#each item in controller.arrangedContent}}
-    <li>{{item.name}}<button {{action 'deleteItem' item}}>Delete</button></li>
+    <li>{{item.name}}: Timestamp: {{item.timestamp}}<button {{action 'deleteItem' item}}>Delete</button></li>
 {{/each}}
 </ul>
