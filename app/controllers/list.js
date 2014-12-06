@@ -1,14 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  start: function() {
-    this.set('list', Ember.Object.create());
-  }.on('init'),
 
   sortProperties: ['name'],
-  sortAscending: true, // sorts post by timestamp
+  sortAscending: true,
 
   actions: {
+
     addItem: function() {
       var newItem = this.store.createRecord('list', {
         name: this.get('listItem'),
@@ -17,11 +15,30 @@ export default Ember.ArrayController.extend({
       this.set('listItem', '');
       newItem.save();
     },
+
     deleteItem: function(item) {
-      var what = this.store.find('list', item.id).then(function(list) {
-        list.deleteRecord()
+      this.store.find('list', item.id).then(function(list) {
+        list.deleteRecord();
         list.save();
-      })
+      });
+    },
+
+    toggleList: function() {
+      if (this.get('sortProperties.0') === 'timestamp') {
+        this.set('sortProperties', ['name']);
+        this.set('listType', 'Alphabetical');
+      } else {
+        this.set('sortProperties', ['timestamp']);
+        this.set('listType', 'By timestamp');
+      }
+    },
+    toggleSort: function() {
+      this.toggleProperty('sortAscending');
+      if (this.get('sortAscending') === false) {
+        this.set('sortType', 'Ascending');
+      } else {
+        this.set('sortType', 'Descending');
+      }
     }
   }
 });

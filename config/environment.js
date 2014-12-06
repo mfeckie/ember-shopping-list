@@ -19,11 +19,11 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-eval' wss://emberfireapp.firebaseio.com",
+      'script-src': "'self' 'unsafe-eval' wss://emberfireapp.firebaseio.com localhost:35729 0.0.0.0:35729",
       'font-src': "'self'",
       'connect-src': "'self'  wss://s-dal5-nss-20.firebaseio.com",
       'img-src': "'self'",
-      'style-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
     }
   };

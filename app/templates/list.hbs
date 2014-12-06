@@ -1,8 +1,27 @@
 {{input value=listItem placeholder='Item' action='addItem' }}
 
+<p>
+  <button {{action 'toggleList'}}>Toggle Alphabetical / Timestamps</button>
+  <button {{action 'toggleSort'}}>Toggle Ascending / Descending</button>
+</p>
+
+<p>
+  {{#if listType}}
+    {{listType}}
+  {{else}}
+    Alphabetical
+  {{/if}}
+  -
+  {{#if sortType}}
+    {{sortType}}
+  {{else}}
+    Ascending
+  {{/if}}
+</p>
+
 
 <ul>
-{{#each item in model}}
+{{#each item in controller.arrangedContent}}
     <li>{{item.name}}<button {{action 'deleteItem' item}}>Delete</button></li>
 {{/each}}
 </ul>
