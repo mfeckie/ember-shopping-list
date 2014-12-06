@@ -1,13 +1,13 @@
-ember-shopping-list
-===================
-
-A simple shopping list app.
-
-
 # Shopping-list
+### Currently deployed at https://emberfireapp.firebaseapp.com
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is currently a wee prototype Ember version of [SHarissis Angular Shopping List App](https://github.com/sharissis/Shopping-List).
+Uses:
+- * [ember.js](http://emberjs.com/) via [ember-cli](http://www.ember-cli.com/)
+- Ember-Data
+- Firebase for both the database and hosting
+
+To run this app, follow instructions below.
 
 ## Prerequisites
 
@@ -15,42 +15,21 @@ You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+* [Ember-CLI](http://www.ember-cli.com/) (`npm install -g ember-cli`)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
+* `git clone https://github.com/JDillon522/ember-shopping-list.git`
+* `cd ember-shopping-list`
 * `npm install`
-* `bower install`
 
 ## Running / Development
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
 ### Running Tests
+#### Note: currently broken because of [Content Security Policy](https://github.com/rwjblue/ember-cli-content-security-policy) issues
 
 * `ember test`
 * `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
