@@ -1,6 +1,8 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var pickFiles = require('broccoli-static-compiler')
+var compileSass = require('broccoli-sass');
 
 var app = new EmberApp();
 
@@ -17,4 +19,18 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree();
+var tree = pickFiles("app/styles", {
+  srcDir: '/',
+  destDir: 'sass'
+});
+var foundationTree = pickFiles("bower_components", {
+  srcDir: '/',
+  destDir: 'bc'
+});
+
+var appsScss = compileSass([tree, foundationTree], 'app/styls/app.scss', 'assets/shopping-list.css');
+
+console.log('FOUNDATION TREE', appsScss)
+
+module.exports = app.toTree([appsScss]);
+

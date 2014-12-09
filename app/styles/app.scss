@@ -1,0 +1,9 @@
+// @import "../../bower_components/foundation/scss/foundation.scss";
+@import "bc/foundation/scss/normalize";
+
+
+$bgcolor: blue;
+
+h2 {
+  background-color: $bgcolor;
+}
